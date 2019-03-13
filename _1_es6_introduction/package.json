@@ -1,0 +1,22 @@
+{
+  "name": "_1_es6_introduction",
+  "version": "1.0.0",
+  "description": "Introduction to ES6",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --require @babel/register"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  },
+  "dependencies": {
+    "cross-fetch": "^3.0.1"
+  }
+}
