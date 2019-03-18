@@ -1,0 +1,49 @@
+.row {
+    justify-content: space-between;
+}
+
+.col {
+    padding: 0 5px;
+}
+
+hr {
+    border: 0;
+}
+
+.card {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.card-type {
+    color: #767676;
+}
+
+.card-title {
+    overflow-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    line-height: 1.375em !important;
+    color: rgb(72, 72, 72) !important;
+    margin: 0px !important;
+}
+
+.card-text {
+    overflow-wrap: break-word !important;
+    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.28571em !important;
+    color: #5a5959;
+    margin: 0px !important;
+}
+
+.card button {
+    margin: 5px 0;
+}
+
+.btn-outline-primary:hover {
+    color: #424040;
+    background-color: #F2F2F2;
+}

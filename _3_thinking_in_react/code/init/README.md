@@ -1,0 +1,2 @@
+- Install [yarn](https://yarnpkg.com/en/docs/install)
+- Run `yarn && yarn start` from the command line

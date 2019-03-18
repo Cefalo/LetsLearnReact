@@ -1,0 +1,101 @@
+[
+  {
+    "id": 432044,
+    "type": "Entire House",
+    "place": "Ostuni",
+    "title": "I SETTE CONI - TRULLO EDERA",
+    "price": 74,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/15273358/d7329e9a_original.jpg?aki_policy=large"
+    },
+    "available": false
+  },
+  {
+    "id": 530250,
+    "type": "Entire House",
+    "place": "Isla Mujeres",
+    "title": "The World Famous Seashell House ~ Casa Caracol",
+    "price": 249,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/6722906/b4bc6418_original.jpg?aki_policy=large"
+    },
+    "available": true
+  },
+  {
+    "id": 1415908,
+    "type": "Treehouse",
+    "place": "Atlanta",
+    "title": "Secluded Intown Treehouse",
+    "price": 375,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/21611933/43f6de69_original.jpg?aki_policy=large"
+    },
+    "available": false
+  },
+  {
+    "id": 3993887,
+    "type": "Hut",
+    "place": "Armenia",
+    "title": "Romantic Cabana with view",
+    "price": 40,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/65441227/bb1eb2dd_original.jpg?aki_policy=large"
+    },
+    "available": false
+  },
+  {
+    "id": 32694,
+    "type": "Entire House",
+    "place": "Joshua Tree",
+    "title": "The Joshua Tree House",
+    "price": 285,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/812e040f-6f6f-4cae-ad67-66c050b57c1f.jpg?aki_policy=large"
+    },
+    "available": false
+  },
+  {
+    "id": 1720832,
+    "type": "Earth house",
+    "place": "Mayne Island",
+    "title": "Unique Cob Cottage",
+    "price": 120,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/26003118/06bf6fed_original.jpg?aki_policy=large"
+    },
+    "available": false
+  },
+  {
+    "id": 8357,
+    "type": "Dome house",
+    "place": "Aptos",
+    "title": "Mushroom Dome Cabin: #1  on airbnb in the world",
+    "price": 130,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/140333/3ab8f121_original.jpg?aki_policy=large"
+    },
+    "available": false
+  },
+  {
+    "id": 13253,
+    "type": "Hotel room",
+    "place": "Cumbria",
+    "title": "Stay in Britain's favourite Castle",
+    "price": 213,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/49398520/a3b3f151_original.jpg?aki_policy=large"
+    },
+    "available": false
+  },
+  {
+    "id": 9437423,
+    "type": "Entire villa",
+    "place": "Bentong",
+    "title": "Rest. Pause. Rainforest Retreat",
+    "price": 232,
+    "image": {
+      "src": "https://a0.muscache.com/im/pictures/7fcc8f74-38b1-4909-a809-6524aaf8f507.jpg?aki_policy=large"
+    },
+    "available": false
+  }
+]
