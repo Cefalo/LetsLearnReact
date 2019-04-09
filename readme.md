@@ -9,12 +9,12 @@ Week | Topic
 02 | ES6/ ES2015 - Part 2
 03 | Thinking in React - Part 1
 04 | Thinking in React - Part 2
-05 | Assignment 1
-06 | Context API and Advanced Concepts
-07 | Routing
-08 | Redux
-09 | Assignment 2
-10 | React Hooks
-11 | Code Splitting, Server Side Rendering
-12 | Devtools & Performance
-13 | Assignment 3
+-- | Assignment 1
+05 | Context API and Advanced Concepts
+06 | Routing
+07 | Redux
+-- | Assignment 2
+08 | React Hooks
+09 | Code Splitting, Server Side Rendering
+10 | Devtools & Performance
+-- | Assignment 3
