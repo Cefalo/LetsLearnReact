@@ -1,9 +1,2 @@
-- npm
-    - npm run
-- yarn
-- eslint
-- prettier
-- lint-staged, husky
-- webpack
-- babel
-- create-react-app
+- Install [yarn](https://yarnpkg.com/en/docs/install)
+- Run `yarn && yarn start` from the command line
