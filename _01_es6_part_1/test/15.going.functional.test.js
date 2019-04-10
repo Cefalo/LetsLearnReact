@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {getEvenSum, getOddSum, getSum} from '../prod/15.going.functional';
+import {getEvenSum, getOddSum, getSum, getDoubleOddSum} from '../prod/15.going.functional';
 
 (function () {
     "use strict";
@@ -14,6 +14,9 @@ import {getEvenSum, getOddSum, getSum} from '../prod/15.going.functional';
         });
         it('summation of odd numbers should be 9', () => {
             expect(getOddSum(values)).to.equal(9);
+        });
+        it('summation of double of the odd numbers should be 18', () => {
+            expect(getDoubleOddSum(values)).to.equal(18);
         });
     });
 }());

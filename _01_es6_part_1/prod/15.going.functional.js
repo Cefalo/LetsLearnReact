@@ -9,3 +9,10 @@ export function getOddSum(values) {
 export function getEvenSum(values) {
     return values.filter(val => (val % 2) === 0).reduce((sum, val) => sum + val, 0);
 }
+
+export function getDoubleOddSum(values) {
+    return values
+        .filter(val => (val % 2) === 1)
+        .map(val => val * 2)
+        .reduce((sum, val) => sum + val, 0);
+}
