@@ -1,0 +1,8 @@
+- [Context API](https://reactjs.org/docs/context.html)
+- [Higher-Order Components](https://reactjs.org/docs/higher-order-components.html)
+- [Render Props](https://reactjs.org/docs/render-props.html)
+- [Portals](https://reactjs.org/docs/portals.html)
+- [Error Boundaries](https://reactjs.org/docs/error-boundaries.html)
+- [Refs](https://reactjs.org/docs/refs-and-the-dom.html)
+- [React.memo](https://reactjs.org/docs/react-api.html#reactmemo)
+- [shouldComponentUpdate](https://reactjs.org/docs/react-component.html#shouldcomponentupdate)
