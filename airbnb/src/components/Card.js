@@ -1,7 +1,8 @@
 import React from "react"
 import Button from "./Button"
+import { ThemeContext, themes } from "../theme"
 
-const Card = ({ item: house }) => {
+const Card = ({ item }) => {
   const {
     type,
     place,
@@ -9,20 +10,40 @@ const Card = ({ item: house }) => {
     price,
     image: { src },
     available
-  } = house
+  } = item
 
   return (
-    <div className="card">
-      <img src={src} className="card-img-top" alt="" />
-      <div className="card-body">
-        <div className="card-type">
-          {type} · {place}
+    <ThemeContext.Consumer>
+      {theme => (
+        <div
+          className="card"
+          style={{ backgroundColor: themes[theme].background }}
+        >
+          <img src={src} className="card-img-top" alt="" />
+          <div className="card-body">
+            <div
+              className="card-type"
+              style={{ color: themes[theme].foreground }}
+            >
+              {type} · {place}
+            </div>
+            <h5
+              className="card-title"
+              style={{ color: themes[theme].foreground }}
+            >
+              {title}
+            </h5>
+            <p
+              className="card-text"
+              style={{ color: themes[theme].foreground }}
+            >
+              {price} per night - Free cancellation
+            </p>
+            <Button enabled={available} />
+          </div>
         </div>
-        <h5 className="card-title">{title}</h5>
-        <p className="card-text">{price} per night - Free cancellation</p>
-        <Button enabled={available} />
-      </div>
-    </div>
+      )}
+    </ThemeContext.Consumer>
   )
 }
 
