@@ -1,6 +1,7 @@
 import React from "react"
 import Home from "./components/Home"
-import { ThemeContext } from "./theme"
+import { ThemeContext } from "./contexts/theme"
+import Login from "./components/Login"
 
 class App extends React.Component {
   state = {
@@ -20,7 +21,7 @@ class App extends React.Component {
         <div className="row align-self-end">
           <div className="col-auto mr-auto" />
           <div className="col-auto">
-            {/*#282c35*/}
+            <Login />
             <button
               type="button"
               className={`btn btn-toggle mr-0 mb-1 mt-1 ${this.state.theme ===

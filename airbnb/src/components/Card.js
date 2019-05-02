@@ -1,6 +1,6 @@
 import React from "react"
 import Button from "./Button"
-import { ThemeContext, themes } from "../theme"
+import { ThemeContext, themes } from "../contexts/theme"
 
 const Card = ({ item }) => {
   const {

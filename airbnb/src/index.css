@@ -6,7 +6,7 @@
   margin-bottom: 20px;
 }
 .btn-toggle {
-  margin: 0 4rem;
+  margin: 0 1rem;
   padding: 0;
   position: relative;
   border: none;
@@ -75,4 +75,11 @@
 }
 .btn-toggle.btn-secondary.active {
   background-color: #ff8300;
+}
+#btn-login{
+  margin: 1rem;
+}
+.modal {
+  display: block;
+  background-color: rgba(0,0,0,.5);
 }
