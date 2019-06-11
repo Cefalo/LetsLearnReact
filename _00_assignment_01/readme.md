@@ -5,6 +5,8 @@ We would like to build the [simpler version](https://raw.githubusercontent.com/C
 - UI is not important. But it's better to look good. Code and CSS can be copy/paste from product hunt or bootstrap can be used.
 - You can build your own `data.json` file or get the data from [here](https://api.producthunt.com/v1/docs) [you may in particular interested to [this](https://api.producthunt.com/v1/docs/posts/posts_index_get_the_tech_posts_of_today)] to build the `data.json` file.
 - Search should also be real time. When no match found, it should render some useful message.
+##### [Extended]
+- Should have a top bar that contains a *LOGIN* button. Upon clicking on that button, it should show a popup login form. Any username and password combination will log the user in. Login button will then be replaced with "Welcome `username`" appended with *LOGOUT* button. Clicking on *LOGOUT* button should log the user out. This feature should utilize *React Portal* and *React Context API*.
 
 Bootstrapping:
 - Run `npx create-react-app NAME_OF_THE_DIRECTORY`
