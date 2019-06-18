@@ -9,6 +9,7 @@ const App = () => {
         <React.Fragment>
             <NavBar/>
             <BrowserRouter>
+                <Route path="/" component={Home}/>
                 <Route path="/home" component={Home}/>
                 <Route path="/about" component={About}/>
             </BrowserRouter>
