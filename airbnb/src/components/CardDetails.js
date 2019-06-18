@@ -1,8 +1,16 @@
 import React from 'react';
+import getCard from '../model/CardReducer';
 
 const CardDetails = ({match}) => {
     console.log(match);
-    return <h2>Here for apartment # {match.params.id} details</h2>;
+    const selectedCard = getCard(match.params.id);
+    console.log(selectedCard);
+    return (
+        <div>
+            <img src={selectedCard.image.src}
+                 className="card-img-top" alt=""/>
+        </div>
+    );
 };
 
 export default CardDetails;
