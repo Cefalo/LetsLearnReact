@@ -4,9 +4,12 @@ import About from './components/About';
 import NavBar from './components/NavBar';
 
 const App = () => {
-    //return <Home/>
-    //return <About/>
-    return <NavBar/>
+    return (
+        <React.Fragment>
+            <NavBar/>
+            <Home/>
+        </React.Fragment>
+    );
 };
 
 export default App
