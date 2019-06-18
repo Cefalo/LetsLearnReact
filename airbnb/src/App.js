@@ -7,8 +7,8 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom';
 const App = () => {
     return (
         <React.Fragment>
-            <NavBar/>
             <BrowserRouter>
+                <NavBar/>
                 <Switch>
                     <Route path="/" exact component={Home}/>
                     <Route path="/home" component={Home}/>
