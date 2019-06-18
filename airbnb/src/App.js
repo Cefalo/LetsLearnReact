@@ -10,9 +10,9 @@ const App = () => {
             <NavBar/>
             <BrowserRouter>
                 <Switch>
+                    <Route path="/" exact component={Home}/>
                     <Route path="/home" component={Home}/>
                     <Route path="/about" component={About}/>
-                    <Route path="/" component={Home}/>
                 </Switch>
             </BrowserRouter>
         </React.Fragment>
