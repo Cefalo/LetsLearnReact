@@ -3,8 +3,14 @@ import Search from './Search';
 import Card from './Card';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
+import {fetchApartment} from '../actions';
 
 class Home extends React.Component {
+
+    componentDidMount() {
+        this.props.fetchApartment();
+    }
+
     render() {
         return (
             <div className="container">
@@ -31,7 +37,8 @@ class Home extends React.Component {
 }
 
 Home.propTypes = {
-    apartments: PropTypes.array
+    apartments: PropTypes.array,
+    fetchApartment: PropTypes.func
 };
 
 const mapStateToProps = state => {
@@ -40,4 +47,4 @@ const mapStateToProps = state => {
     }
 };
 
-export default connect(mapStateToProps)(Home);
+export default connect(mapStateToProps, {fetchApartment})(Home);
