@@ -1,7 +1,8 @@
 import React from 'react';
 import Search from './Search';
 import Card from './Card';
-import items from '../data';
+import PropTypes from 'prop-types';
+import {connect} from "react-redux";
 
 class Home extends React.Component {
     render() {
@@ -22,11 +23,21 @@ class Home extends React.Component {
                 <Search/>
                 <hr className="my-4"/>
                 <div className="row">
-                    {items.map((item, i) => <Card key={i} item={item}/>)}
+                    {this.props.apartments.map((item, i) => <Card key={i} item={item}/>)}
                 </div>
             </div>
         );
     }
+}
+
+Home.propTypes = {
+    apartments: PropTypes.array
 };
 
-export default Home;
+const mapStateToProps = state => {
+    return {
+        apartments: state.apartments
+    }
+};
+
+export default connect(mapStateToProps)(Home);
