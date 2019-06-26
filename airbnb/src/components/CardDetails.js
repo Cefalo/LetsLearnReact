@@ -1,9 +1,10 @@
 import React from 'react';
-import getCard from '../model/CardReducer';
+import {connect} from "react-redux";
 
-const CardDetails = ({match}) => {
+const CardDetails = ({match, apartments}) => {
     console.log(match);
-    const selectedCard = getCard(match.params.id);
+    const apartmentId = match.params.id;
+    const selectedCard = apartments.find(apartment => apartment.id == apartmentId);
     console.log(selectedCard);
     return (
         <div>
@@ -13,4 +14,10 @@ const CardDetails = ({match}) => {
     );
 };
 
-export default CardDetails;
+const mapStateToProps = state => {
+    return {
+        apartments: state.apartments
+    }
+};
+
+export default connect(mapStateToProps)(CardDetails);
