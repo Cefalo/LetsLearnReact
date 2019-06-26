@@ -19,5 +19,18 @@ export const fetchFromGithub = () => {
             type: FETCH_APARTMENT,
             payload: json
         });
+
+        dispatch({
+            type: SEARCH_APARTMENT,
+            payload: json
+        });
     }
+};
+
+export const searchApartments = location => async (dispatch, getState) => {
+    const searchedApartments = getState().apartments.filter(apartment => apartment.place.includes(location));
+    dispatch({
+        type: SEARCH_APARTMENT,
+        payload: searchedApartments
+    });
 };

@@ -3,7 +3,7 @@ import Search from './Search';
 import Card from './Card';
 import PropTypes from 'prop-types';
 import {connect} from "react-redux";
-import {fetchApartment, fetchFromGithub} from '../actions';
+import {fetchApartment, fetchFromGithub, searchApartments} from '../actions';
 
 class Home extends React.Component {
 
@@ -13,6 +13,7 @@ class Home extends React.Component {
 
     searchLocation(location){
         console.log(`At home, location: ${location}`);
+        this.props.searchApartments(location);
     }
 
     render() {
@@ -43,16 +44,18 @@ class Home extends React.Component {
 Home.propTypes = {
     apartments: PropTypes.array,
     fetchApartment: PropTypes.func,
-    fetchFromGithub: PropTypes.func
+    fetchFromGithub: PropTypes.func,
+    searchApartments: PropTypes.func
 };
 
 const mapStateToProps = state => {
     return {
-        apartments: state.apartments
+        apartments: state.searchedApartment
     }
 };
 
 export default connect(mapStateToProps, {
     fetchApartment,
-    fetchFromGithub
+    fetchFromGithub,
+    searchApartments
 })(Home);
