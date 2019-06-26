@@ -1,10 +1,42 @@
 Redux
 ======
 
+- [Terminology](#terminology)
+- [Installation](#installation)
+- [Integration of redux in react](#integrating-of-redux-in-react-app)
+- [Developing a reducer](#developing-a-reducer)
+- [Developing an action creator](#developing-an-action-creator)
+- [Implementing reducer logic](#developing-logic-of-apartment-reducer)
+- [Hook application state in a component](#hook-application-state-in-a-component)
+- [Calling action creator from a component](#calling-action-creator-from-a-component)
+- [Installing and integrating redux-thunk](#installing-and-integrating-redux-thunk)
+- [Fetching data via network call](#fetching-data-via-network-call)
+- [Using state in action creator](#using-state-in-action-creator)
+
+### Terminology
+**Action Creator**
+- an action creator is function that return a plain javascript object. we refer to this object as an action
+
+**Action**
+- action has a `type` property and a `payload` property (optional)
+- `type` property describes some change we want to make insdie our data / application state
+- `payload` property provides some context regarding this change
+
+**dispatch**
+- dispatch function will take an action and pass it off to bunch of different places (i.e. reducers) inside our application
+
+**reducer**
+- reducer is a function that is responsible for taking in an action and some existing amount of data. It's going to process that action and then make some changes to the data and return it
+
+**state**
+- state property is the central repository of all information that has been created by reducers
+
 ### Installation
 ```
 npm install --save redux react-redux
 ```
+
+Anyway, to proceed with todays class we need bump `react` and `react-dom` to version `16.8.6` and `react-scripts` to `3.0.0`
 
 ### Integrating of redux in react app
 
@@ -31,7 +63,7 @@ const store = createStore(reducers);
 </Provider>
 ```
 
-### developing a reducer
+### Developing a reducer
 
 A reducer will be called with a piece of application state & action. it need to check the action and depending on the action, it can provide updated piece of application state.
 
@@ -53,7 +85,7 @@ export default combineReducers({
 
 Note that we can not return `undefined` from a reducer. For default state, we can return `null` if needed.
 
-### developing an action creator
+### Developing an action creator
 
 So, an action creator need to return a plain javascript object, that must contain a `type` field and an optional `payload` field.
 
@@ -115,7 +147,7 @@ and connecting with react component:
 export default connect(mapStateToProps)(Home);
 ```
 
-### calling action creator from a component:
+### Calling action creator from a component
 we need to import our require action creator and pass that to component via `connect` as props
 
 importing :-
@@ -132,7 +164,7 @@ export default connect(mapStateToProps, {
 
 now, we can call the action creator from the component like `this.props.getApartment()`
 
-### installing and integrating redux-thunk
+### Installing and integrating redux-thunk
 
 installation is like following
 ```
@@ -148,7 +180,7 @@ import thunk from 'redux-thunk';
 const store = createStore(reducers, applyMiddleware(thunk));
 ```
 
-### fetching data via network call
+### Fetching data via network call
 
 So far, we are using apartment data from local json file. But in real world scenario, we need to make api call to get the data.
 
@@ -172,5 +204,13 @@ export const fetchFromGithub = () => {
 }; 
 ```
 
+### Using state in action creator
 
+just like we are using `dispatch` in a action creator, we can use `state` too & do lot more interesting stuff.
 
+Example like this:-
+```
+export const searchApartments = location => async (dispatch, getState) => {
+	const apartments = getState().apartments
+}
+```
