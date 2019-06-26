@@ -148,4 +148,29 @@ import thunk from 'redux-thunk';
 const store = createStore(reducers, applyMiddleware(thunk));
 ```
 
+### fetching data via network call
+
+So far, we are using apartment data from local json file. But in real world scenario, we need to make api call to get the data.
+
+So, lets fetch apartment data from our github repository. It's available in the following uri:
+```
+https://raw.githubusercontent.com/Cefalo/LetsLearnReact/master/airbnb/src/data.json
+```
+
+and now the action creator will be like this:
+
+```
+export const fetchFromGithub = () => {
+    return async function fetchThenDispatch(dispatch) {
+        const response = await fetch(APARTMENT_URL);
+        const json = await response.json();
+        dispatch({
+            type: FETCH_APARTMENT,
+            payload: json
+        });
+    }
+}; 
+```
+
+
 
