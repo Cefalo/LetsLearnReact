@@ -11,6 +11,10 @@ class Home extends React.Component {
         this.props.fetchFromGithub();
     }
 
+    searchLocation(location){
+        console.log(`At home, location: ${location}`);
+    }
+
     render() {
         return (
             <div className="container">
@@ -26,7 +30,7 @@ class Home extends React.Component {
                             changes.</p>
                     </div>
                 </div>
-                <Search/>
+                <Search onSearch={location => this.searchLocation(location)}/>
                 <hr className="my-4"/>
                 <div className="row">
                     {this.props.apartments.map((item, i) => <Card key={i} item={item}/>)}
