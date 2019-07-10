@@ -1,22 +1,15 @@
-import React, {useEffect} from 'react';
-import Search from './Search';
+import React, {useEffect, useContext} from 'react';
 import Card from './Card';
 import PropTypes from 'prop-types';
-import {useSelector, useDispatch} from "react-redux";
-import {fetchFromGithub, searchApartments} from '../actions';
+import ApartmentContext from '../contexts/apartment'
+import {FETCH_APARTMENT} from '../actions'
 
 const Home = () => {
-    const apartments = useSelector(state => state.searchedApartment)
-    const dispatch = useDispatch()
+    const {state: {apartments}, dispatch} = useContext(ApartmentContext)
 
     useEffect( () => {
-        dispatch(fetchFromGithub())
+        dispatch({type: FETCH_APARTMENT})
     }, [])
-
-    const searchLocation = (location) => {
-        console.log(`At home, location: ${location}`)
-        dispatch(searchApartments(location))
-    }
 
     return (
       <div className="container">
@@ -32,10 +25,9 @@ const Home = () => {
                       changes.</p>
               </div>
           </div>
-          <Search onSearch={location => searchLocation(location)}/>
           <hr className="my-4"/>
           <div className="row">
-              {apartments.map((item, i) => <Card key={i} item={item}/>)}
+              {apartments && (apartments.map((item, i) => <Card key={i} item={item}/>))}
           </div>
       </div>
     )

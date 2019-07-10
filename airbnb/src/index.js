@@ -1,29 +1,17 @@
-import React from 'react';
+import React, {useReducer} from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import {createStore, applyMiddleware, compose} from 'redux';
-import {Provider} from 'react-redux';
-import reducers from './reducers';
-import thunk from 'redux-thunk';
-import { createLogger } from "redux-logger"
+import ApartmentContext from "./contexts/apartment"
+import {rootReducer, initialState} from "./reducers/apartments"
 
-const composeEnhancers =
-  (process.env.NODE_ENV !== "production" &&
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
-  compose
+const Root = () => {
+  const [state, dispatch] = useReducer(rootReducer, initialState)
 
-const middlewares = [thunk]
-
-if (process.env.NODE_ENV !== "production") {
-  middlewares.push(createLogger())
+  return (
+    <ApartmentContext.Provider value={{state, dispatch}}>
+      <App />
+    </ApartmentContext.Provider>
+  )
 }
 
-const store = createStore(reducers, composeEnhancers(applyMiddleware(...middlewares)));
-
-const app = (
-    <Provider store={store}>
-        <App/>
-    </Provider>
-);
-
-ReactDOM.render(app, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
