@@ -6,7 +6,7 @@ Course content
 Week | Topic
 --- | --- 
 01 | [ES6/ ES2015 - Part 1](_01_es6_part_1)
-02 | ES6/ ES2015 - Part 2()
+02 | [ES6/ ES2015 - Part 2](_02_es6_part_2)
 03 | Thinking in React - Part 1
 04 | Thinking in React - Part 2
 -- | Assignment 1

@@ -10,4 +10,4 @@ Topic Covered
 Additional Resources
 ----
 - [What the heck is the event loop anyway?](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
-- [Asynchronous JavaScript](https://github.com/Cefalo/LetsLearnReact/)
+- [Asynchronous JavaScript](https://github.com/Cefalo/LetsLearnReact/blob/master/_02_es6_part_2/Asynchronous_JavaScript.pdf)
