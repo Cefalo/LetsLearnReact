@@ -39,6 +39,3 @@ Topic Covered
 - [rest operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [class](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [inheritance](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends)
-- [promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [async, await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
-- functional programming
