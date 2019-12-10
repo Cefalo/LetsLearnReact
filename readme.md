@@ -14,7 +14,7 @@ Week | Topic
 06 | [Routing](_06_routing)
 07 | [Redux](_07_redux)
 -- | [Assignment 2](_00_assignment_01)
-08 | React Hooks
+08 | [React Hooks](https://github.com/Cefalo/LetsLearnReact/commits/_07_redux)
 09 | Code Splitting, Server Side Rendering
-10 | Devtools & Performance
+10 | [Devtools & Performance](https://github.com/Cefalo/LetsLearnReact/commits/devtools)
 -- | Assignment 3
